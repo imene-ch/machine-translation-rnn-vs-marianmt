@@ -13,9 +13,9 @@ A head-to-head comparison of two machine translation architectures — a classic
 
 ## Dataset
 
-![WMT14 dataset exploration: top words and sentence length coverage](wmt14_deep_exploration.png)
+![WMT14 dataset exploration: top words and sentence length coverage](results/wmt14_deep_exploration.png)
 
-![WMT14 sentence length distribution for English and French](wmt14_sentence_length_distribution.png)
+![WMT14 sentence length distribution for English and French](results/wmt14_sentence_length_distribution.png)
 
 Average sentence length: 25.3 words (English), 26.6 words (French). A `MAX_LENGTH = 50` cutoff was chosen, covering 93.1% of English and 91.5% of French sentences. Vocabulary size was increased from 10,000 to 20,000 words per language after the initial run showed a 48.9% unknown-word rate in French — a result of French's richer verb conjugation and gender agreement compared to English.
 
@@ -30,7 +30,7 @@ Average sentence length: 25.3 words (English), 26.6 words (French). A `MAX_LENGT
 | Pretrained | No | Yes |
 | Architecture | GRU Seq2Seq | Transformer |
 
-![Final comparison: BLEU score and training loss for RNN Seq2Seq vs MarianMT](final_comparison.png)
+![Final comparison: BLEU score and training loss for RNN Seq2Seq vs MarianMT](results/final_comparison.png)
 
 MarianMT scored **24.19 BLEU** — a "decent translation" by standard BLEU interpretation (20–29 range) — compared to the RNN's **5.24 BLEU**, which falls in the "almost useless" range. The RNN's higher final loss (4.09) also reflects the inherent difficulty of generating from a 20,000-word vocabulary at every decoding step from a randomly-initialized model, versus MarianMT's loss of 0.60 after fine-tuning a model that already understood both languages.
 
