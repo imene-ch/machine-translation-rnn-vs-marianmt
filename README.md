@@ -56,12 +56,18 @@ MarianMT scored **24.19 BLEU** — a "decent translation" by standard BLEU inter
 ## Repo Structure
 
 ```
-├── NLP_MachineTranslation_RNN_vs_MarianMT.ipynb   # Full notebook: EDA → preprocessing → training → BLEU evaluation
-├── rnn_loss_curve.png                             # RNN Seq2Seq training loss curve
-├── wmt14_deep_exploration.png                     # Top words + sentence coverage analysis
-├── wmt14_sentence_length_distribution.png         # EN/FR sentence length histograms
-├── final_comparison.png                           # BLEU score + training loss comparison
-└── NLP_Report_Final.docx                          # Full written report
+├── notebooks/
+│   └── NLP_MachineTranslation_RNN_vs_MarianMT.ipynb   # Full notebook: EDA → preprocessing → training → BLEU evaluation
+├── results/
+│   ├── wmt14_deep_exploration.png                     # Top words + sentence coverage analysis
+│   ├── wmt14_sentence_length_distribution.png         # EN/FR sentence length histograms
+│   └── final_comparison.png                           # BLEU score + training loss comparison
+├── reports/
+│   └── NLP_Report_Final.docx                          # Full written report
+├── NLP_Translation_Demo/
+│   └── app.py                                          # Demo app for running inference
+├── requirements.txt                                    # Python dependencies
+└── README.md
 ```
 
 ## Tech Stack
